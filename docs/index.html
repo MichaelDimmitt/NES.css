@@ -92,19 +92,19 @@
 
             <section class="showcase" v-for="sample in collection" :key="sample">
               <section class="nes-container with-title">
-                <h3 class="title">{{ sample.title | capitalize }}</h3>
+              <h3 class="title"><br/><!--{{ sample.title | capitalize }}--></h3>
                 <div
                   :id="sample.title"
                   class="item"
                   v-html="sample.code">
                 </div>
-                <p v-if="sample.description" class="description nes-text">{{ sample.description }}</p>
-                <p v-if="sample.note" class="note nes-text is-error">{{ sample.note }}</p>
+                <p v-if="sample.description" class="description nes-text"><br/><!--{{ sample.description }}--></p>
+                <p v-if="sample.note" class="note nes-text is-error"><br/><!--{{ sample.note }}--></p>
                 <button type="button" class="nes-btn is-primary showcode" @click="sample.showCode = !sample.showCode">&lt;&gt;</button>
               </section>
               <section class="samplecode" v-show="sample.showCode">
                 <button type="button" class="nes-btn copycode" @click="copy($event, sample.title)">copy</button>
-                <pre><code class="html">{{ sample.code }}</code></pre>
+                <pre><code class="html"><br/><!--{{ sample.code }}--></code></pre>
               </section>
             </section>
           </section>
